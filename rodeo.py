@@ -1,6 +1,10 @@
 def rename_rodeo_columns (columns):
     # Replace this and the line below with your code...
-    raise NotImplementedError
+    """"
+    Function to rename column names for the Ogdenville Rodeo data analysis.
+    It converts names to lower case, replaces spaces with underscores, and removes the trailing word "Data" if present.
+    
+    """
     
     
 if __name__ == "__main__":
