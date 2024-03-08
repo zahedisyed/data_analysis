@@ -1,21 +1,20 @@
 def rename_rodeo_columns (columns):
     # Replace this and the line below with your code...
     """
-    A funciton t rename column names for the Ogedenville Rodeo data analysis.
-    It converts names to lower case, replaces cases with underscores, and removes the trailing word
-    "data" if present.
+    Function to rename column names based on the following criteria:
+    - Converts names to lower case
+    - Replaces spaces with underscore
+    - Removes the trailing word "Data" if exists
     """
     corrected_columns = []
     for col in columns:
-        lower_col = col.lower() # convert to lower case
-        underscore_col = lower_col.replace(" ","_") # Replace spaces with underscores
-        # remove the trailing word, "Data" if present
+        lower_col = col.lower()
+        underscore_col = lower_col.replace(" ","_")
         if underscore_col.endswith("_data"):
             underscore_col = underscore_col[:-5]
         corrected_columns.append(underscore_col)
     return corrected_columns
-
-
+        
 if __name__ == "__main__":
     # Create a list of example original column names 
     original = [
