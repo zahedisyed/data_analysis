@@ -5,7 +5,17 @@ def rename_rodeo_columns (columns):
     It converts names to lower case, replaces spaces with underscores, and removes
     the trailing word "Data" if present.
     """
-    
+    corrected_columns = []
+    for col in columns:
+        # Convert to lower case
+        lower_col = col.lower()
+        # Replace spaces with underscores
+        underscore_col = lower_col.replace(" ", "_")
+        # Remove the trailing word "Data" if present
+        if underscore_col.endswith("_data"):
+            underscore_col = underscore_col[:-5]
+        corrected_columns.append(underscore_col)
+    return corrected_columns
     
 if __name__ == "__main__":
     # Create a list of example original column names 
